@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sculk Exclusives!</title>
+    <!-- Font Awesome cus it's awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    <style>
+            body, html {
+        height: 100%;
+        margin: 0;
+        font-family: "Pathway Extreme", sans-serif;
+    }
+
+    h1 {
+        font-weight: 800;
+    }
+    /* ChatGPT Made content start */
+
+    .bg {
+    /* The image used */
+    background-image: url('sculk.png');
+    height: 100%; 
+    width: 100%;
+
+    /* Position the image to the right */
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-container {
+    position: absolute;
+    top: 50%;
+    left: 10%; /* Move text to the left side */
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    text-align: left; /* Align the text to the left */
+    
+}
+
+
+    /* Add the blur effect */
+    .blur {
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+        filter: blur(8px); /* Blurring effect */
+        position: relative; /* Positioned relative to its normal position */
+        width: 100%;
+        height: 30px;
+        margin-left: 100px ;
+        display: none;
+    }
+
+    /* ChatGPT made content end */
+
+
+    .menu {
+    width: fit-content;
+    border-radius: 6px;
+    box-shadow: 0px 6px 4px rgba(82, 88, 108, 0.534);
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+
+
+.menu li {
+  padding: 20px;
+}
+
+.menu a {
+  font-family: "Pathway Extreme", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: color 0.3s, font-size 0.3s;
+  color: inherit; 
+}
+
+.menu a:hover {
+  color: rgb(103, 110, 156);
+}
+
+.menu a:active {
+  font-size: 15px;
+}
+
+.menu li::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: transparent;
+  z-index: -1;
+  transition: background-color 0.3s;
+}
+
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: yellow;
+  transition: left 0.3s, width 0.3s, background-color 0.3s;
+}
+
+    .nav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .glowing-img {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.75);
+        border-radius: 16px;
+    }
+
+    .div-nav-thing-amogus {
+        margin-left: 50%;
+    }
+
+    .datapack-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust column width as needed */
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 20px; /* Space between grid items */
+  padding: 20px; /* Padding around the grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: 1fr;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+
+  .grid-item {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    gap: 10px; /* Adds space between the image/link container and the button */
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  .grid-item img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  
+  .grid-item {
+    border: 0px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #e8e8ed;
+    border-radius: 10px;
+    box-shadow: 3px 0.7px 3px rgba(255, 255, 255, 0.1);
+    
+  }
+  
+  .grid-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .copy-btn {
+    cursor: pointer;
+    background-color: #5865F2;
+    border: #5865F2;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 25px;
+    transition: filter 0.3s;
+    transition: background-color 0.5s, color 0.5s, filter 0.3s;
+  }
+
+  .copy-btn:hover {
+    filter: brightness(75%);
+  }
+  
+
+  /* Hide the actual link but keep it accessible for the copy functionality */
+  .hidden-link {
+    display: none;
+  }
+
+  #dismoji {
+    text-align: left;
+  }
+
+  #dismoji a {
+    display: block;
+    margin-bottom: 10px; /* Adjust the margin as needed */
+    text-decoration: none;
+    margin-top: 20px;
+  }
+
+  .container {
+    width: 100%; /* Fill the full width of its parent container */
+    height: 100%; /* Fill the full height of its parent container */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+
+
+.datapacks-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+    gap: 20px; /* Adjust the gap between items */
+    padding: 20px; /* Padding around the grid */
+}
+
+.datapack {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+
+}
+
+.datapack:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.75);
+    transform: translateY(-10px);
+}
+
+.datapack img {
+    max-width: 100px;
+}
+
+.download-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.milo-is-the-best {
+  display: block;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+  <div class="div-nav-thing-amogus">
+    <nav>
+      <ul class="menu" id="menu">
+        <li data-color="#201ae8" data-target="home" class="open"><a href="#home">Home</a></li>
+        <li data-color="#e3a617" data-target="datapacks"><a href="#datapacks">Our datapacks</a></li>
+        <li data-color="#6b4fe8" data-target="games"><a href="#games">Games</a></li>
+        <li data-color="#0b740d" data-target="dismoji"><a href="#dismoji">Dismoji</a></li>
+        <li data-color="#1581d4" data-target="about"><a href="#about">About</a></li>
+        <div class="underline"></div>
+      </ul>
+    </nav>
+  </div>
+    
+    <div class="bg">
+      <div class="milo-is-the-best">Milo, mix it up!</div>
+        <a href="#home"><img src="logoBIG.png" alt="boo" width="260"></a>
+        <div class="home-container" id="home">
+            <img src="logo.png" alt="boo" width="64" height="64" class="glowing-img">
+            <h1>Welcome to Sculk Exclusives!</h1>
+            <p>Sculk Exclusives is a cool place.<p>
+        </div>
+        <div class="home-container" id="datapacks">
+            <h1>Explore Datapacks!</h1>
+            <p>YIPPYY!!!<p>
+                <div class="container">
+                    <div class="datapacks-container" class="datapacks-grid"></div>
+                </div>
+        </div>
+        <div class="home-container" id="dismoji">
+          <img src="dismoji-logo.png" alt="boo" width="64" height="64" class="glowing-img2" style="border-radius: 100px;">
+          <a href="https://ohio.com" style="color: white;"><i class="fa-solid fa-download"></i>  Download Dismoji (Windows 64bit)</a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="color: white;">Web version (All operating systems)</a>
+      </div>      
+      <div class="home-container" id="games">
+        <a href="snake/snake.html">SNAK</a>
+      </div>
+      <div class="home-container" id="about">
+        <h1>About Us</h1>
+        <p>SculkSMP is an amazing MinecraftSMP with a thriving community.</p>
+        <p>This is our website follow us on our socials!</p>
+        <a href="https://www.youtube.com/@SculkOfficial"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="50px" width="50px" version="1.1" id="Layer_1" viewBox="0 0 461.001 461.001" xml:space="preserve" style="margin-right: 20px;">
+            <g>
+                <path style="fill:#F61C0D;" d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728   c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137   C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607   c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"/>
+            </g>
+            </svg></a>
+        <a href="https://discord.gg/bSpGUqdwWz"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 -28.5 256 256" version="1.1" preserveAspectRatio="xMidYMid"><g><path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#5865F2" fill-rule="nonzero">
+
+</path>
+    </g>
+</svg></a>
+      </div>
+    </div>
+
+    
+
+    <script>
+        window.addEventListener('hashchange', function() {
+        document.querySelectorAll('div[id]').forEach(function(div) {
+            div.style.display = 'none'; 
+        });
+
+    
+        var currentHash = window.location.hash.replace('#', '');
+        if (currentHash) {
+            var targetDiv = document.getElementById(currentHash);
+            if (targetDiv) {
+                targetDiv.style.display = 'block';
+            }
+        }
+    });
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('div[id]').forEach(function(div) {
+        div.style.display = 'none';
+    });
+
+    var currentHash = window.location.hash.replace('#', '');
+    if (currentHash) {
+        var targetDiv = document.getElementById(currentHash);
+        if (targetDiv) {
+            targetDiv.style.display = 'block';
+        } else {
+            document.getElementById('home').style.display = 'block';
+        }
+    } else {
+        document.getElementById('home').style.display = 'block';
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menu = document.getElementById('menu');
+    const underline = document.querySelector('.underline');
+
+    const setActive = (element) => {
+      const {offsetLeft: left, offsetWidth: width} = element;
+      //const color = element.getAttribute('data-color');
+      const color = '#0f2bff'
+
+      
+      underline.style.left = `${left}px`;
+      underline.style.width = `${width}px`;
+      underline.style.backgroundColor = color;
+
+      
+      menu.querySelectorAll('li').forEach(li => {
+        const a = li.querySelector('a');
+        if(li === element) {
+          a.style.color = color; 
+        } else {
+          a.style.color = '';
+          li.classList.remove('active');
+        }
+      });
+    };
+
+    
+    const activeItem = menu.querySelector('.active');
+    if (activeItem) setActive(activeItem);
+
+
+   
+    menu.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') {
+        const parentLi = e.target.parentElement;
+        parentLi.classList.add('active');
+        setActive(parentLi);
+      }
+    });
+  });
+    </script>
+    <script src="datapack_list.js"></script>
+</body>
+</html>
