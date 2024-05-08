@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dismoji - the place for Discord stickers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome cus it's awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Menu -->
+    <nav>
+        <ul class="menu" id="menu">
+            <!-- Logo and Title -->
+            <li class="logo-title2">
+                <img src="logo.png" alt="boo" style="height: 50px;">
+                <span class="title2">Dismoji</span>
+            </li>
+
+            <!-- Menu Items -->
+            <li class="text"><a href="#home">Home</a></li>
+            <li class="text"><a href="#emojis">Emojis</a></li>
+            <!--<li class="text"><a href="#emojis-servers">Server Emojis</a></li>-->
+            <li class="text"><a href="#update-log">Update Log</a></li>
+            <li class="text"><a href="#bot">Add emojis</a></li>
+            <div class="underline"></div>
+        </ul>
+    </nav>
+
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <!--<em>Enable Dark Mode!</em>-->
+    </div>
+    
+    <div class="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="logo-holder">
+        <svg class="logo-bg" width="200" height="200" viewBox="0 0 303 303" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="shape-gradient-Badge" gradientTransform="rotate(90)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#5865F1"></stop></linearGradient></defs><defs><mask id="mask-Badge" fill="black"><rect width="100%" height="100%" fill="white"></rect><g opacity="100" style="transform-origin: center center;"></g></mask></defs><g fill="url(#shape-gradient-Badge)"><g mask="url(#mask-Badge)"><path d="M151.5,303 C130.081687,303 111.011625,291.088313 101.372437,272.529562 C81.4123125,278.816813 59.501625,273.7605 44.3705625,258.629437 C29.2395,243.498375 24.16425,221.587688 30.4704375,201.627563 C11.9116875,191.988375 0,172.918313 0,151.5 C0,130.081687 11.9116875,111.011625 30.4704375,101.372437 C24.16425,81.4123125 29.2395,59.5205625 44.3705625,44.3705625 C59.5205625,29.2395 81.43125,24.1831875 101.372437,30.4704375 C111.011625,11.9116875 130.081687,0 151.5,0 C172.918313,0 191.988375,11.9116875 201.627563,30.4704375 C221.606625,24.16425 243.479437,29.2395 258.629437,44.3705625 C273.7605,59.501625 278.83575,81.4123125 272.529562,101.372437 C291.088313,111.011625 303,130.081687 303,151.5 C303,172.918313 291.088313,191.988375 272.529562,201.627563 C278.83575,221.587688 273.7605,243.479437 258.629437,258.629437 C243.517313,273.7605 221.587688,278.83575 201.627563,272.529562 C191.988375,291.088313 172.918313,303 151.5,303 Z" stroke="#ffffff" stroke-linejoin="round" stroke-width="0" transform-origin="151.5px 151.5px" style="transform: none; transform-origin: 151.5px 151.5px;"></path></g></g></svg>
+        <svg class="logo-logo" width="200" height="200" viewBox="0 0 303 303" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient gradientTransform="rotate(90)"><stop offset="0%" stop-color="#fff"></stop></linearGradient></defs><g fill="#fff" stroke-linejoin="round" style="transform-origin: 85px 85px; transform: translateX(66.5px) translateY(66.5px) scale(1) rotate(0deg);" transform-origin="85px 85px"><g viewBox="0 0 170 170" stroke="none" stroke-width="1" fill-rule="evenodd"><g id="Group"><path d="M85,0 C38.131,0 0,38.131 0,85 C0,131.869 38.131,170 85,170 C131.869,170 170,131.869 170,85 C170,38.131 131.869,0 85,0 Z M35.7272727,72.0151517 C35.7272727,68.3849547 37.1972955,64.8237728 39.7708705,62.255719 C42.3389243,59.6890455 45.8925145,58.2121212 49.5303032,58.2121212 C53.1605002,58.2121212 56.7216821,59.6890455 59.2890458,62.255719 C61.863311,64.8237728 63.3333337,68.3849547 63.3333337,72.0151517 C63.3333337,75.6453487 61.863311,79.2065306 59.2890458,81.7738943 C56.7216821,84.3474693 53.1605002,85.8181822 49.5303032,85.8181822 C45.9001062,85.8181822 42.3389243,84.3474693 39.7708705,81.7738943 C37.1972955,79.2065306 35.7272727,75.6453487 35.7272727,72.0151517 Z M116.691606,116.691091 C107.955152,125.427545 96.4760303,129.797061 85,129.797061 C73.5213939,129.797061 62.0469091,125.429606 53.3083939,116.691091 C50.2906364,113.673848 50.2906364,108.781455 53.3083939,105.763182 C56.3256364,102.745939 61.2185455,102.745939 64.236303,105.763182 C75.6860606,117.212424 94.3139394,117.212424 105.763182,105.763182 C108.780424,102.745939 113.673333,102.745939 116.691091,105.763182 C119.709364,108.780939 119.709364,113.673333 116.691606,116.691091 Z M131.22844,81.7738943 C128.661076,84.3474693 125.099894,85.8181822 121.469697,85.8181822 C117.8395,85.8181822 114.278318,84.3474693 111.710264,81.7738943 C109.143591,79.2065306 107.666667,75.6522502 107.666667,72.0151517 C107.666667,68.3780532 109.143591,64.8237728 111.710264,62.255719 C114.278318,59.6890455 117.8395,58.2121212 121.469697,58.2121212 C125.099894,58.2121212 128.661076,59.6890455 131.22844,62.255719 C133.795803,64.8237728 135.272728,68.3849547 135.272728,72.0151517 C135.272728,75.6522502 133.795113,79.2065306 131.22844,81.7738943 L131.22844,81.7738943 Z" id="Shape"></path></g></g></g></svg>
+      </div>
+      
+    <!-- Home Tab -->
+    <div id="home" style="text-align: center;">
+        <div class="logo-title" style="font-size: 40px; justify-content: center; display: flex; flex-direction: column; align-items: center;">
+            <img src="logo.png" alt="boo" style="height: 70px;">
+            <span class="title">Dismoji</span>
+            <p class="subtitle">The place for Discord stickers</p>
+        </div>
+        <button class="copy-btn" style="margin-top: 10px;">Explore Emojis</button>
+        <p class="text">Dismoji Might be old.</p>
+        
+        <input type="file" id="fileInput" style="display: none;">
+        <label for="fileInput" class="update-btn" id="updateLabel">Update Dismoji</label>
+    </div>
+    
+    
+    <!-- Emoji tab -->
+    <div id="emojis">
+        <p class="title" style="font-size: 40px;">Explore Emojis</p>
+        <div class="emoji-grid-container">
+            <div class="emoji-container"></div>
+            <!--<div class="hovering-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  
+            </div>-->
+        </div>
+    </div>
+    <div class="popup-menu" id="popupMenu">
+        <div class="menu-header">
+            <h2>Menu Title</h2>
+            <button class="close-btn" onclick="togglePopupMenu()">✖</button>
+        </div>
+        <div id="menu-content"></div>
+    </div>
+
+    <!-- Server Emojis -->
+    <div id="emojis-servers">
+        <div class="logo-title" style="font-size: 40px; justify-content: center; display: flex; flex-direction: column; align-items: center;">
+            <span class="title">Explore Emojis from servers</span>
+            <p class="subtitle">Explore emojis that are from servers.</p>
+            <input type="text" id="searchBox">
+            <div id="results"></div>
+        </div>
+        <div class="emoji-server-container"></div>
+    </div>
+
+
+    <!-- Update log -->
+    <div id="update-log">
+        <p>I'm lazy so just visit the discord server</p>
+        <a href="https://discord.gg/DeJqwmQQ7G">Click here!</a>
+        <p>or</p>
+        <a href="https://discord.gg/KUdmX8k5cp">Click here for the update log</a>
+    </div>
+
+
+    <p class="text" id="ver">ERROR: JavaScript did not load</p >
+    
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(function() {
+    var loader = document.querySelector(".loading");
+    loader.style.opacity = 0;
+    loader.style.visibility = "hidden";
+  }, 1500); // Adjust time as necessary
+});
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.grid-item').forEach(function(item) {
+                item.style.transform = 'translateY(0px)';
+            });
+
+        });
+    </script>
+</body>
+</html>
