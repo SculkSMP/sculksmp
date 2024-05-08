@@ -275,7 +275,7 @@ function loadLinks(emojis) {
       	button.onclick = function() {
             
         navigator.clipboard.writeText(`[${link.name}](${link.url}?size=64)`).then(() => {
-          	alert('Link copied to clipboard!');
+          	alert('Emoji copied!');
         }).catch(err => {
           	console.error('Error in copying text: ', err);
         });
