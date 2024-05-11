@@ -351,60 +351,80 @@
     
 
     <script>
-window.addEventListener('hashchange', function() {
-    updateVisibility();
-});
+        window.addEventListener('hashchange', function() {
+        document.querySelectorAll('div[id]').forEach(function(div) {
+            div.style.display = 'none'; 
+        });
+
+    
+        var currentHash = window.location.hash.replace('#', '');
+        if (currentHash) {
+            var targetDiv = document.getElementById(currentHash);
+            if (targetDiv) {
+                targetDiv.style.display = 'block';
+            }
+        }
+    });
 
 document.addEventListener('DOMContentLoaded', function() {
-    updateVisibility();
-    setupMenu();
+    document.querySelectorAll('div[id]').forEach(function(div) {
+        div.style.display = 'none';
+    });
+
+    var currentHash = window.location.hash.replace('#', '');
+    if (currentHash) {
+        var targetDiv = document.getElementById(currentHash);
+        if (targetDiv) {
+            targetDiv.style.display = 'block';
+        } else {
+            document.getElementById('home').style.display = 'block';
+        }
+    } else {
+        document.getElementById('home').style.display = 'block';
+    }
 });
 
-function updateVisibility() {
-    const allDivs = document.querySelectorAll('div[id]');
-    allDivs.forEach(div => div.style.display = 'none');
-    const currentHash = window.location.hash.replace('#', '') || 'home';
-    const targetDiv = document.getElementById(currentHash);
-    if (targetDiv) {
-        targetDiv.style.display = 'block';
-    }
-}
 
-function setupMenu() {
+document.addEventListener('DOMContentLoaded', function() {
     const menu = document.getElementById('menu');
     const underline = document.querySelector('.underline');
 
-    menu.querySelectorAll('li').forEach(li => {
-        const a = li.querySelector('a');
-        if (window.location.hash.includes(a.getAttribute('href'))) {
-            setActive(li);
-        }
-    });
+    const setActive = (element) => {
+      const {offsetLeft: left, offsetWidth: width} = element;
+      //const color = element.getAttribute('data-color');
+      const color = '#0f2bff'
 
+      
+      underline.style.left = `${left}px`;
+      underline.style.width = `${width}px`;
+      underline.style.backgroundColor = color;
+
+      
+      menu.querySelectorAll('li').forEach(li => {
+        const a = li.querySelector('a');
+        if(li === element) {
+          a.style.color = color; 
+        } else {
+          a.style.color = '';
+          li.classList.remove('active');
+        }
+      });
+    };
+
+    
+    const activeItem = menu.querySelector('.active');
+    if (activeItem) setActive(activeItem);
+
+
+   
     menu.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A') {
-            const parentLi = e.target.parentElement;
-            parentLi.classList.add('active');
-            setActive(parentLi);
-        }
+      if (e.target.tagName === 'A') {
+        const parentLi = e.target.parentElement;
+        parentLi.classList.add('active');
+        setActive(parentLi);
+      }
     });
-}
-
-function setActive(element) {
-    const { offsetLeft: left, offsetWidth: width } = element;
-    const color = '#0f2bff';
-
-    underline.style.left = `${left}px`;
-    underline.style.width = `${width}px`;
-    underline.style.backgroundColor = color;
-
-    const menu = document.getElementById('menu');
-    menu.querySelectorAll('li').forEach(li => {
-        const a = li.querySelector('a');
-        a.style.color = (li === element) ? color : '';
-    });
-}
-
+  });
     </script>
     <script src="datapack_list.js"></script>
 </body>
