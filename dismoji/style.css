@@ -1,0 +1,698 @@
+/* Styles for the navigation menu */
+nav {
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 10px;
+    width: 90%;
+    transform: translateX(-50%);
+    background-color: #333; /* Dark background color */
+    text-align: center; /* Center align items */
+    padding: 10px 0; /* Add some padding */
+    border-radius: 20px;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  /* Styles for each list item */
+  .menu li {
+    margin: 0 15px; /* Add some space between menu items */
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  /* Styles for the logo and title */
+  .logo-title img {
+    height: 50px; /* Set logo height */
+    margin-right: 10px; /* Add some space between the logo and title */
+    margin-left: 10px;
+  }
+  
+  .logo-title {
+    display: flex; /* Use flexbox to align logo and title */
+    align-items: center; /* Center align logo and title vertically */
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  /* Styles for the links */
+  .menu a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set text color to white */
+    font-size: 16px; /* Set font size */
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  /* Add a smooth transition for hover effects */
+  .menu a:hover {
+    color: #ddd; /* Lighten the color on hover */
+    transition: color 0.3s; /* Smooth transition */
+  }
+  
+  .text {
+    
+    font-family: "Pathway Extreme", sans-serif;
+    font-weight: 400;
+    transition: background-color 0.5s, color 0.5s;
+  }
+
+
+  .title {
+    
+    font-family: "Pathway Extreme", sans-serif;
+    font-weight: 900;
+    transition: background-color 0.5s, color 0.5s;
+  }
+
+/* Adjusted Styles for the menu list */
+.menu {
+    list-style-type: none; /* Remove list bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: inline-flex; /* Display items inline and use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    position: relative; /* Add this line to create a positioning context */
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  /* Adjusted styles for the underline */
+  .underline {
+    position: absolute;
+    bottom: -10px; /* Adjust as needed to position the underline correctly */
+    height: 2px;
+    background-color: #5865F2;
+    border-radius: 40px;
+    transition: left 0.3s, width 0.3s, background-color 0.3s;
+  }
+  
+  body, html {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+.emoji-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust column width as needed */
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 20px; /* Space between grid items */
+  padding: 20px; /* Padding around the grid */
+  display: grid;
+  margin: 0;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: 1fr;
+  overflow: auto;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.grid-item:hover {
+  transform: translateY(-10px);
+}
+
+  .grid-item {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    gap: 10px; /* Adds space between the image/link container and the button */
+    transform: translateY(0);
+    transition: background-color 0.5s, color 0.5s, transform 0.3s;
+  }
+  
+  .grid-item img {
+    object-fit: contain;
+    max-width: 128;
+    max-height: 128;
+  }
+  
+  
+  .grid-item {
+    border: 0px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #e8e8ed;
+    border-radius: 10px;
+    box-shadow: 3px 0.7px 3px rgba(255, 255, 255, 0.1);
+    
+  }
+  
+  .grid-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .copy-btn {
+    cursor: pointer;
+    background-color: #5865F2;
+    border: #5865F2;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 25px;
+    transition: filter 0.3s;
+    transition: background-color 0.5s, color 0.5s, filter 0.3s;
+  }
+
+  .copy-btn:hover {
+    filter: brightness(75%);
+  }
+  
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(16, 122, 216);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    transition: filter 0.3s;
+    display: flex; /* or 'block' */
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+  
+  
+  .button:hover {
+    cursor: pointer;
+    filter: brightness(75%);
+  }
+
+  /* Hide the actual link but keep it accessible for the copy functionality */
+  .hidden-link {
+    display: none;
+  }
+
+  .subtitle {
+    color: #333;
+    font-family: "Pathway Extreme", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+
+  }
+
+  .logo-title {
+    display: flex;
+    flex-direction: column; /* This ensures that children of .logo-title are stacked vertically */
+    align-items: center; /* This centers the children horizontally */
+    justify-content: center; /* This centers the children vertically in case of a specified height */
+}
+
+.title, .subtitle {
+    margin: 0; /* Removes default margins that might disrupt the layout */
+    text-align: center; /* Ensures text is centered */
+}
+
+.subtitle {
+    color: #333; /* Example color, adjust as necessary */
+    font-size: 16px; /* Adjusts size, ensure it's visible */
+}
+
+.logo-title2 img {
+  height: 20px; /* Set logo height */
+  margin-right: 10px; /* Add some space between the logo and title */
+  margin-left: 10px;
+}
+
+.logo-title2 {
+  display: flex; /* Use flexbox to align logo and title */
+  align-items: center; /* Center align logo and title vertically */
+}
+
+/* bruh I spent so much time on finding this */
+.emoji-container {
+  width: 96%; /* Ensure the container is full width */
+}
+ 
+.splitSeparator {
+  border: 0; /* Removes default border */
+  height: 1px; /* Sets the height of the separator line */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); /* Creates a fade-in-out effect for the line */
+  margin-top: 20px; /* Adds space above the separator */
+  margin-bottom: 20px; /* Adds space below the separator */
+}
+
+.split-name {
+  font-family: "Pathway Extreme", sans-serif;
+  font-weight: 900;
+  transition: background-color 0.5s, color 0.5s;
+  width: 100%; /* Ensures the title spans the full width */
+  margin-top: 20px; /* Adds space above the title for clarity */
+  margin-bottom: 10px; /* Adds space below the title */
+  text-align: center; /* Centers the title text */
+  font-size: 40px;
+
+}
+.split-name, .splitSeparator {
+  grid-column: 1 / -1; /* Span from the first to the last line of the grid */
+  text-align: center;
+  width: 100%;
+}
+
+
+body {
+  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* General background and text color for body in dark mode */
+.dark-mode body {
+  background-color: #333; /* Dark background */
+  color: #ffffff; /* Light text */
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s, color 0.5s; /* Smooth transition for color changes */
+}
+
+/* Styles for the navigation menu in dark mode */
+.dark-mode nav {
+  background-color: #d4dbe5; /* Lighter shade for dark mode */
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Styles for the menu list in dark mode */
+.dark-mode .menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode .menu li {
+  margin: 0 15px; /* Space between menu items */
+}
+
+/* Styles for the logo and title in dark mode */
+.dark-mode .logo-title, .dark-mode .logo-title2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title2 {
+  font-family: "Pathway Extreme", sans-serif;
+  font-weight: 900;
+  transition: background-color 0.5s, color 0.5s;
+  color: white;
+  transition: color 0.5s;
+}
+
+.dark-mode .title2 {
+  color: black;
+}
+
+.dark-mode .logo-title img, .dark-mode .logo-title2 img {
+  height: 50px; /* Adjust according to your logo's size */
+  margin-right: 10px;
+}
+
+/* Styles for links to suit dark mode */
+.dark-mode .menu a {
+  text-decoration: none;
+  color: black; /* Dark mode text color for better readability */
+  font-size: 16px;
+  
+}
+.dark-mode .button, .dark-mode .copy-btn {
+  text-decoration: none;
+  color: white; /* Dark mode text color for better readability */
+  font-size: 13px;
+  transition: background-color 0.5s, color 0.5s, font-size 0.5s, filter 0.3s; /* Smooth transition */
+}
+
+
+.dark-mode .menu a:hover {
+  color: #5e5e5e; /* Lighten the color on hover */
+}
+
+/* Additional components like .emoji-container, .grid-item in dark mode */
+.dark-mode .grid-item {
+  background-color: #2c2f33; /* Dark background */
+  color: #ffffff; /* Light text */
+}
+
+.dark-mode .grid-item img {
+  border-radius: 4px;
+}
+
+.dark-mode .copy-btn, .dark-mode .button, .dark-mode .update_btn{
+  background-color: #5865F2; /* Button color in dark mode */
+  color: #fff;
+}
+
+/* Adjustments for titles, subtitles, and other text elements in dark mode */
+.dark-mode .title, .dark-mode .subtitle, .dark-mode .split-name {
+  color: #fff; /* Light text for dark background */
+}
+
+/* Hide elements not needed to be visible but accessible in dark mode */
+.dark-mode .hidden-link {
+  display: none;
+}
+
+#updateLabel {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #4B6CB7, #182848);
+  border-color: #5865F2;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 25px;
+  display: inline-block; /* Ensure label is block-level for the animation */
+  border-radius: 45px;
+  animation: pulse 2s infinite ease-in-out;
+  transition: background-color 0.5s, color 0.5s, filter 0.3s, border-radius 0.3s;
+}
+
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+#updateLabel {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+
+#updateLabel:hover {
+  filter: brightness(75%);
+  border-radius: 4px;
+}
+/* Fullscreen loading overlay */
+.loading {
+  position: fixed; /* Use fixed to cover the whole screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Center dots horizontally */
+  align-items: center; /* Center dots vertically */
+  background-color: rgba(255, 255, 255, 1); /* Semi-transparent or any color you prefer */
+  z-index: 9999; /* High z-index to stay on top */
+  transition: opacity 0.5s ease, visibility 0s 0.5s; /* Fade out effect */
+}
+
+/* Adjust the size and animation speed of the dots if needed */
+.loading div {
+  width: 15px; /* Larger Dot size */
+  height: 15px; /* Larger Dot size */
+  margin: 0 5px; /* Space between dots */
+  /* Keep the rest of the styles */
+}
+
+
+.loading div {
+  width: 8px; /* Dot size */
+  height: 8px; /* Dot size */
+  background-color: black; /* Dot color */
+  border-radius: 50%; /* Makes the dots circular */
+  display: inline-block;
+  animation: loading 1.4s infinite ease-in-out both;
+}
+
+/* Animation Keyframes */
+@keyframes loading {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1.0); }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1); /* Element at its natural size */
+  }
+  50% {
+    transform: scale(1.05); /* Element slightly larger */
+  }
+}
+
+/* Animation Delay */
+.loading div:nth-child(1) { animation-delay: -0.32s; }
+.loading div:nth-child(2) { animation-delay: -0.16s; }
+.loading div:nth-child(3) { animation-delay: 0s; }
+
+div[id] {
+  display: block; /* Keep them in the document flow */
+  opacity: 0; /* Start them off as invisible */
+  visibility: hidden; /* Make them not interactable */
+  position: absolute; /* Position them on top of each other */
+  width: 100%; /* Ensure full width */
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth transition for opacity and visibility */
+}
+
+/* When a section is active, make it visible */
+div[id].active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.emoji-grid-container {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.hovering-button {
+  position: fixed;
+  bottom: 10px; /* Adjust based on your needs */
+  right: 10px; /* Adjust based on your needs */
+  background-color: #5865F2; /* Semi-transparent black */
+  color: white;
+  padding: 10px 12px;
+  border-radius: 40px;
+  cursor: pointer;
+  user-select: none; /* Prevents the text inside the button from being selectable */
+  z-index: 10; /* Ensures the button is always on top */
+  transition: bottom 0.3s, filter 0.3s;
+}
+
+.hovering-button:hover {
+  filter: brightness(75%);
+  bottom: 15px;
+}
+
+
+.menu-header {
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  position: relative;
+}
+
+.menu-header h2 {
+  margin: 0;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-content a {
+  display: block;
+  margin: 10px 0;
+  color: #333;
+  text-decoration: none;
+}
+
+.popup-menu {
+  position: fixed;
+  display: none;
+}
+
+.popup-menu.active {
+  display: block;
+}
+.emoji-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  opacity: 0; /* Start with the paragraph hidden */
+  text-align: center;
+  transform: translateY(15px); /* Start slightly below the final position */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for both opacity and transform */
+}
+
+.grid-item {
+  text-align: center;
+}
+
+.fav-btn {
+  position: absolute;
+  left: 5px;
+  bottom: 40%;
+  margin: 0;
+  fill: none;
+  stroke: black;
+  opacity: 0; /* Start with the paragraph hidden */
+  text-align: center;
+  transform: translateY(-15px); /* Start slightly below the final position */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for both opacity and transform */
+}
+
+#star {
+  transition: fill 0.3s, stroke 0.3s;
+}
+
+.grid-item:hover .emoji-name {
+  opacity: 1; /* Fully visible on hover */
+  transform: translateY(0); /* Move to the original position */
+}
+
+.grid-item:hover .fav-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fav-btn:hover {
+  stroke: none;
+  fill: #f1a11f;
+}
+
+.emoji-name {
+  color: black;
+}
+
+.dark-mode .emoji-name {
+  color: white;
+}
+
+body {
+  padding-top: 120px; 
+}
+
+.logo-holder {
+  position: fixed;
+  z-index: 100;
+  bottom: 20px;
+  right: 20px;
+  opacity: 50%;
+}
+
+.logo-holder svg {
+  position: absolute;  /* Both SVGs are positioned absolutely within their fixed parent */
+  bottom: 0;
+  right: 0;
+  width: 90px;  /* Ensures both SVGs are the same size */
+  height: 90px;
+}
+
+.logo-bg {
+  z-index: 1;  /* Lower z-index, serves as background */
+  animation: spin 20s linear infinite; /* Spinni boi */
+
+}
+
+.logo-logo {
+  z-index: 2;  /* Higher z-index, serves as the logo on top */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#filter {
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  color: black;
+  background-color: #eeeeee;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-mode #filter {
+  color: white;
+  background-color: rgb(46, 46, 46);
+}
+
+.filter-wrapper {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
