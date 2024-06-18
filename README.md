@@ -8,6 +8,6 @@
 ### Dismoji 😎
 
 **SculkSMP** has created **Dismoji**!
-**Dismoji** is a place where you can view different discord emoji's, use them **WITHOUT NITRO!!**
+**Dismoji** is a place where you can view different discord emoji's, use them **WITHOUT NITRO!!**\n
 
 *im sorry dismoji updates are paused rn*
